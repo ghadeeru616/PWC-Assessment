@@ -11,7 +11,7 @@ Rest API for Company management
 
   `git clone https://github.com/ghadeeru616/PWC-Assessment.git` 
   
-  `cd Company`
+  `cd PWC-Assessment/company/`
   
   `mvn clean install` 
     
