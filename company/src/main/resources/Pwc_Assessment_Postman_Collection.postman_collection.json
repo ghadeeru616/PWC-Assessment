@@ -1,0 +1,778 @@
+{
+	"info": {
+		"_postman_id": "8560b1ee-fc4b-4821-b66c-6ac05ef49bd9",
+		"name": "Pwc_Assessment_Postman_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateEmployee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeNumber\": 1,\r\n    \"employeeType\": \"Programmer\",\r\n    \"speciality\": \"Engineer\",\r\n    \"email\": \"ghadeer@gmail.com\",\r\n    \"salary\": 1000.0,\r\n    \"user\": {\r\n        \"name\": \"Ghadeer Alomari\",\r\n        \"gender\": \"F\",\r\n        \"nationality\": null,\r\n        \"age\": 28\r\n    },\r\n    \"department\": {\r\n        \"name\": \"IT Department\",\r\n        \"code\": \"DEPT_IT\"\r\n    },\r\n    \"projects\": [\r\n        {\r\n            \"name\": \"PWC Company Project\",\r\n            \"code\": \"P1\",\r\n            \"department\": null,\r\n            \"employees\": null\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/createEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"createEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AssignEmployeeToProject",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeNumber\": 1,\r\n    \"projectCode\": \"PWC_P1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/assignToProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"assignToProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnAssignEmployeeToProject",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeNumber\": 1,\r\n    \"projectCode\": \"PWC_P1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/unAssignFromProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"unAssignFromProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDepartment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"IT Department\",\r\n    \"code\": \"DEPT_IT1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/createDepartment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"createDepartment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProject",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Project two\",\r\n    \"code\": \"PWC_P1\",\r\n    \"department\": {\r\n        \"name\": \"IT Department\",\r\n        \"code\": \"DEPT_I2\"\r\n    },\r\n    \"employees\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/createProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"createProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProject",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"PWC Company Project\",\r\n    \"code\": \"PWC_P111\",\r\n    \"department\": {\r\n        \"name\": \"IT Department\",\r\n        \"code\": \"DEPT_ITTT\"\r\n    },\r\n    \"employees\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/updateProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"updateProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDepartment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Engineering Department\",\r\n    \"code\": \"DEPT_ENG\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/updateDepartment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"updateDepartment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEmployee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeNumber\": 2,\r\n    \"employeeType\": \"Programmer\",\r\n    \"speciality\": \"Engineer\",\r\n    \"email\": \"ghadeer123@gmail.com\",\r\n    \"salary\": 1000.0,\r\n    \"user\": {\r\n        \"name\": \"Ghadeer Alomari\",\r\n        \"gender\": \"F\",\r\n        \"nationality\": null,\r\n        \"age\": 28\r\n    },\r\n    \"department\": {\r\n        \"name\": \"IT Department\",\r\n        \"code\": \"DEPT_ITT\"\r\n    },\r\n    \"projects\": [\r\n        {\r\n            \"name\": \"PWC Company Project\",\r\n            \"code\": \"P11\",\r\n            \"department\": null,\r\n            \"employees\": null\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/updateEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"updateEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeNumber\": 1,\r\n    \"employeeType\": \"Programmer\",\r\n    \"speciality\": \"Engineer\",\r\n    \"email\": \"ghadeer@gmail.com\",\r\n    \"salary\": 1000.0,\r\n    \"user\": {\r\n        \"name\": \"Ghadeer Alomari\",\r\n        \"gender\": \"F\",\r\n        \"nationality\": null,\r\n        \"age\": 28\r\n    },\r\n    \"department\": {\r\n        \"name\": \"IT Department\",\r\n        \"code\": \"DEPT_IT\"\r\n    },\r\n    \"projects\": [\r\n        {\r\n            \"name\": \"PWC Company Project\",\r\n            \"code\": \"P1\",\r\n            \"department\": null,\r\n            \"employees\": null\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/deleteEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"deleteEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteDepartment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"IT Department\",\r\n    \"code\": \"DEPT_IT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/deleteDepartment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"deleteDepartment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProject",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"PWC Company Project\",\r\n    \"code\": \"PWC_P1\",\r\n    \"department\": {\r\n        \"name\": \"IT Department\",\r\n        \"code\": \"DEPT_IT\"\r\n    },\r\n    \"employees\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/Managers/deleteProject",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"deleteProject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeDetails",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "emp1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "emp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Employees/get/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Employees",
+						"get",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllDepartments",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Managers/AllDepartments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"AllDepartments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllProjects",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "emp1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "emp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Managers/AllProjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"AllProjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllEmployees",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "emp1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "emp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Managers/AllEmployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"AllEmployees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeByName",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "emp1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "emp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Managers/EmpByName/Ghadeer Alomari",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"EmpByName",
+						"Ghadeer Alomari"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeByEmail",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "emp1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "emp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Managers/EmpByEmail/ghadeer@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"EmpByEmail",
+						"ghadeer@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeesByDepartment",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "emp1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "emp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Managers/EmployeesByDepartment/DEPT_IT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"EmployeesByDepartment",
+						"DEPT_IT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeesByProject",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "emp1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "emp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Managers/EmployeesByProject/PWC_P1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Managers",
+						"EmployeesByProject",
+						"PWC_P1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
