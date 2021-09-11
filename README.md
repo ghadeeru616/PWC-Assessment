@@ -18,3 +18,4 @@ Rest API for Company management
   `mvn spring-boot:run`
   
  * Use the attached postman collection to test the API. 
+    `company/src/main/resources/Pwc_Assessment_Postman_Collection.postman_collection.json`
