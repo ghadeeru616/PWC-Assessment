@@ -9,9 +9,9 @@ Rest API for Company management
 ## How to run:
 * Create new folder, change directory to it and run the following commands:  
 
-  `git clone https://github.com/ghadeeru616/available-deals-service.git` 
+  `git clone https://github.com/ghadeeru616/PWC-Assessment.git` 
   
-  `cd available-deals-service\domain`
+  `cd Company`
   
   `mvn clean install` 
     
